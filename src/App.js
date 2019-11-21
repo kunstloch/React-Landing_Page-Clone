@@ -84,7 +84,44 @@ const HandRight = styled.img`
   right: -110px;
   top: 63px;
   width: 290px;
-  z-index: 2;
+  z-index: 20;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  display: inline-block;
+  background: #f18e2d;
+  border: 0px;
+  padding: 6px 6px 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  margin: 0px;
+`;
+
+const Label = styled.label`
+  text-align: left;
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: normal;
+`;
+
+const Button = styled.button`
+  border-radius: 50px;
+  color: #f1912d;
+  width: auto;
+  margin: 10% auto;
+  background-color: white;
+  border: none;
+  outline: nonet;
+  text-transform: uppercase;
+  border: 0;
+  padding: 6px 18px;
+  float: right;
+  padding: 15px;
 `;
 
 const Em = styled.em`
@@ -104,12 +141,12 @@ const Div = styled.div`
   & input {
     background: #f18e2d;
     /* display: block; */
-    margin: 30px 0;
+    /* margin: 30px 0; */
   }
 
   & label {
     background: #f18e2d;
-    margin: 30px 0;
+    /* margin: 30px 0; */
   }
 `;
 
@@ -184,53 +221,54 @@ function App() {
           </p>
         </Content>
       </Main>
-      <Contact>
+      <Contact className="inputfield">
         <HandRight src={handright} />
         <ContactH>EBOOK DICCIONARIO DEL INBOUND MARKETING</ContactH>
         <Div>
-          <label>Nombre*</label>
-          <input></input>
-          <label>Rellena este campo obligatorio.</label>
+          <Label>Nombre*</Label>
+          <Input></Input>
+          <Label>Rellena este campo obligatorio.</Label>
         </Div>
         <Div>
-          <label>Apellido*</label>
-          <input></input>
-          <label>Rellena este campo obligatorio.</label>
+          <Label>Apellido*</Label>
+          <Input></Input>
+          <Label>Rellena este campo obligatorio.</Label>
         </Div>
         <Div>
-          <label>Email*</label>
-          <input></input>
-          <label>Rellena este campo obligatorio.</label>
+          <Label>Email*</Label>
+          <Input></Input>
+          <Label>Rellena este campo obligatorio.</Label>
         </Div>
         <Div>
-          <label>Website URL*</label>
-          <input></input>
+          <Label>Website URL*</Label>
+          <Input></Input>
         </Div>
         <Div>
-          <label>Facturación*</label>
-          <input></input>
-          <label>Selecciona una opción del menú desplegable.</label>
+          <Label>Facturación*</Label>
+          <Input></Input>
+          <Label>Selecciona una opción del menú desplegable.</Label>
         </Div>
         <Div>
           <Div>
-            <label>Objetivos de marketing para los próximos 12 meses</label>
+            <Label>Objetivos de marketing para los próximos 12 meses</Label>
             <Textarea cols="35" rows="4"></Textarea>
           </Div>
+          <Div>¿Qué necesita tu negocio del inbound marketing?*</Div>
           <input type="checkbox" />
-          <label>Me interesa sólo estrategia*</label>
+          <Label>Me interesa sólo estrategia*</Label>
           <Div>
             <input type="checkbox" />
-            <label>Me interesa estrategia y ejecución de campaña</label>
+            <Label>Me interesa estrategia y ejecución de campaña</Label>
           </Div>
           <Div>
             <input type="checkbox" />
-            <label>Me interesa formación para gestionarlo internamente</label>
+            <Label>Me interesa formación para gestionarlo internamente</Label>
           </Div>
           <Div>
             <input type="checkbox" />
             <CheckboxLabel>Otros</CheckboxLabel>
             <br />
-            <label>Selecciona al menos una opción.</label>
+            <Label>Selecciona al menos una opción.</Label>
           </Div>
           <Div>
             <input type="checkbox" />
@@ -241,7 +279,7 @@ function App() {
             </CheckboxLabel>
           </Div>
 
-          <input></input>
+          <Button>Lo quiero!</Button>
         </Div>
       </Contact>
     </body>
